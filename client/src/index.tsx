@@ -12,7 +12,7 @@ ReactDOM.render(
       <QueryClientProvider client={client}>       
 
          <App />
-        <Footer />
+        
 
       </QueryClientProvider>
   </React.StrictMode>

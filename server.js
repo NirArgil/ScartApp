@@ -8,6 +8,8 @@ const connectDB = require("./config/db");
 
 const PORT = process.env.PORT || 5000;
 
+app.use(express.json());
+
 // app.use(bodyParser.json());
 
 // Connect the Database
@@ -20,7 +22,11 @@ app.use(express.json({ extended: false }));
 app.use("/api/users", require("./routes/api/users"));
 app.use("/api/auth", require("./routes/api/auth"));
 app.use("/api/profile", require("./routes/api/profile"));
-// app.use("/api/posts", require("./routes/api/posts"));
+// app.use("/api/transaction", require("./routes/api/transactions"));
+
+const transactions = require('./routes/api/transactions');
+
+app.use('/api/transaction', transactions);
 
 // Serve Static Assets in Production
 if (process.env.NODE_ENV === "production") {

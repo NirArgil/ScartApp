@@ -80,7 +80,6 @@ export const getProfileById = userId => async dispatch => {
   }
 };
 
-
 // Create or update profile
 export const createProfile = (
   formData,

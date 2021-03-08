@@ -10,6 +10,7 @@ import Dashboard from "../dashboard/Dashboard.js";
 import CreateProfile from "../profile-forms/CreateProfile";
 import EditProfile from "../profile-forms/EditProfile";
 import Shop from "../../Shop";
+import TransacionsApp from "../../TransactionsApp";
 
 import Profile from "../profile/Profile";
 import Profiles from "../profiles/Profiles";
@@ -29,9 +30,8 @@ const Routes = () => {
         <PrivateRoute exact path="/create-profile" component={CreateProfile} />
         <PrivateRoute exact path="/edit-profile" component={EditProfile} />
         <PrivateRoute exact path="/shop" component={Shop} />
+        <PrivateRoute exact path="/transaction" component={TransacionsApp} />
        
-        {/* <PrivateRoute exact path="/post/:id" component={Post} /> */}
-        {/* <PrivateRoute exact path="/posts" component={Posts} /> */}
         <Route component={NotFound} />
       </Switch>
     </section>

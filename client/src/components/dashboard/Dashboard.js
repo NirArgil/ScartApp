@@ -80,6 +80,12 @@ const Dashboard = ({
               </Link>
             </div>
 
+            <div className="GoShop"> 
+              <Link to="/transaction" className="btn btn-light">
+              <i className="far fa-handshake fa-2x" /> Transacions App
+              </Link>
+            </div>
+
             <div className="DLT">
               <div className="my-2">
                 <button className="btn btn-danger" onClick={() => deleteAccount()}>
