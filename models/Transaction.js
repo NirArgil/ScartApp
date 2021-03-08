@@ -6,7 +6,9 @@ const TransactionSchema = new mongoose.Schema({
     // reference to the user model since each transaction is related to a user
     ref: "user"
   },
-  
+  id:{
+    type: Number,
+  },
   text: {
     type: String,
     trim: true,

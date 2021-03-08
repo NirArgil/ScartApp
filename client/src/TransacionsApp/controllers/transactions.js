@@ -25,7 +25,8 @@ exports.getTransactions = async (req, res, next) => {
 // @access  Public
 exports.addTransaction = async (req, res, next) => {
   try {
-    const { text, amount, userId } = req.body;
+    const { text, amount, userID } = req.body;
+    
     const transaction = await Transaction.create(req.body);
   
     return res.status(201).json({

@@ -36,27 +36,6 @@ export const GlobalProvider = ({ children }) => {
     }
   }
 
-  // Get TRANSACTIONS by ID
-const getTransactionsByUserId = userID => async dispatch => {
-
-  try {
-    const res = await axios.get(`/api/profile/user/${userID}`);
-
-    dispatch({
-      type: 'GET_TRANSACTIONS_BY_ID',
-      payload: res.data
-    });
-  
-  } catch (err) {
-    dispatch({
-      type: 'TRANSACTION_ERROR',
-      payload: {
-        msg: err.response.statusText,
-        status: err.response.status
-      }
-    });
-  }
-};
 
   async function deleteTransaction(id) {
     try {
@@ -82,7 +61,7 @@ const getTransactionsByUserID = userID => async dispatch => {
     const res = await axios.get(`/api/transaction/${userID}`);
 
     dispatch({
-      type: 'GET_TRANSACTIONS',
+      type: 'GET_TRANSACTIONS_BY_ID',
       payload: res.data
     });
   
